@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+        :root {
+            --independence: #555B6E;
+            --morning-blue: #89B0AE;
+            --powder-blue: #BEE3DB;
+            --cultured: #FAF9F9;
+            --apricot: #FFD6BA;
+            --xsmall-font: 0.85rem;
+            --small-font: 1rem;
+            --medium-font: 1.2rem;
+            --large-font: 1.4rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            box-sizing: border-box;
+            background-color: var(--cultured);
+        }
+
+        .app {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .app__form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            background-color: white;
+            border: 1px solid var(--morning-blue);
+            box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+            border-radius: 0.5rem;
+            /* justify-items: center; */
+        }
+
+        .app__brand-logo {
+            width: 190px;
+            margin-bottom: 2rem;
+            justify-self: center;
+            display: none;
+        }
+
+        .app__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app__form--label {
+            font-size: var(--small-font);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .app__form--input {
+            font-size: var(--medium-font);
+            height: 2rem;
+            border: 1px solid var(--independence);
+            transition: all .14s ease-out;
+            border-radius: 0.5rem;
+            caret-color: var(--independence);
+            box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 1.4rem;
+        }
+
+        .app__primary-button {
+            font-size: var(--small-font);
+            font-weight: 700;
+            color: white;
+            text-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            transition: all .14s ease-out;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: var(--powder-blue);
+            border: none;
+            box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .app__link {
+            text-decoration: none;
+            color: var(--morning-blue)
+        }
+
+        .app__form .app__link {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .app__secondary-button {
+            font-size: var(--small-font);
+            font-weight: 700;
+            color: var(--powder-blue);
+            /* text-shadow: 0.1rem 0.1rem 2px rgba(190, 227, 219, 0.9); */
+            transition: all .14s ease-out;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            border: 1px solid var(--powder-blue);
+            box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .app__primary-button:hover,
+        .app__secondary-button:hover,
+        .app__form--input:hover {
+            box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.6);
+            transform: translate(-.10rem, -.10rem);
+        }
+
+        .app__form--input:focus {
+            outline: none !important;
+            border: 1.8px solid var(--morning-blue);
+        }
+
+        ::placeholder {
+            padding: 0.5rem 0.5rem;
+            font-weight: 400;
+            font-size: var(--xsmall-font);
+        }
+
+        #password::placeholder {
+            font-family: 'Viaoda Libre', cursive;
+        }
+
+        @media (max-width: 640px) {
+            .app__form-container {
+                border: none;
+                box-shadow: none;
+                background-color: var(--cultured)
+            }
+
+            .app__brand-logo {
+                display: block;
+            }
+
+            .app__secondary-button {
+                /* position: fixed;
+                width: 300px;
+                bottom: 2rem; */
+                position: relative;
+                top: 150%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="app">
+        <div class="app__form-container">
+            <img src="./_assets/brand-logo.png" alt="logo" class="app__brand-logo">
+
+            <form class="app__form" action="#">
+                <label for="email" class="app__form--label">Email</label>
+                <input type="email" id="email" class="app__form--input" placeholder="yourname@example.com">
+
+                <label for="password" class="app__form--label">Password</label>
+                <input type="password" id="password" class="app__form--input" placeholder="**********">
+
+                <input type="submit" value="Log in" class="app__primary-button">
+
+                <a href="/" class="app__link">Forgot Password?</a>
+            </form>
+
+            <button class="app__secondary-button">Sign up</button>
+            
+        </div>
+    </main>
+</body>
+
+</html>

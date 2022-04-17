@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./_styles/navbar.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+        :root {
+            --independence: #555B6E;
+            --morning-blue: #89B0AE;
+            --powder-blue: #BEE3DB;
+            --cultured: #FAF9F9;
+            --apricot: #FFD6BA;
+            --xsmall-font: 0.85rem;
+            --small-font: 1rem;
+            --medium-font: 1.2rem;
+            --large-font: 1.4rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            box-sizing: border-box;
+            background-color: var(--cultured);
+        }
+
+
+        .app__product-detail {
+            margin-top: 4.375rem;
+            width: 100%;
+        }
+
+        .app__product-detail img:nth-child(2) {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0 0 0.6rem 0.6rem;
+        }
+
+        .app__product-detail--info p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--medium-font);
+        }
+
+        .app__product-detail--info p:nth-child(3) {
+            color: var(--independence);
+        }
+
+        .app__primary-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            font-size: var(--small-font);
+            font-weight: 700;
+            color: white;
+            text-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            transition: all .14s ease-out;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: var(--powder-blue);
+            border: none;
+            box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            margin: 2rem 0;
+        }
+
+        .app__primary-button:hover {
+            box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.6);
+            transform: translate(-.10rem, -.10rem);
+        }
+
+        .app__product-detail-image img:nth-child(1) {
+            display: none;
+        }
+
+        .app__product-detail--info {
+            padding: 0 1rem
+        }
+
+        @media (min-width: 640px) {
+            .app__product-detail {
+                width: 400px;
+                /* height: 100%; */
+                background-color: white;
+                border: 1px solid var(--morning-blue);
+                border-top: none;
+                box-shadow: 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);
+                padding-bottom: 1rem;
+                border-radius: 0 0 0.6rem 0.6rem;
+
+                position: absolute;
+                right: 0;
+            }
+
+            .app__product-detail-image {
+                position: relative;
+
+            }
+
+            .app__product-detail-image img:nth-child(1) {
+                display: inline-block;
+                background-color: white;
+                border-radius: 50%;
+                padding: 4px;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 0.5rem;
+                left: 0.5rem;
+                z-index: 2;
+                transition: all .14s ease-out;
+            }
+
+            .app__product-detail-image img:nth-child(1):hover {
+                cursor: pointer;
+                box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.6);
+                transform: translate(-.10rem, -.10rem);
+            }
+
+
+            .app__navbar-mobile {
+                display: none;
+            }
+
+            .app__navbar-desktop {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                margin: 0;
+            }
+
+            .app__navbar-desktop li {
+                margin-right: 1rem;
+                padding: 0.4rem;
+                border-radius: 0.5rem;
+                border: 1px solid white;
+                text-align: center;
+                transition: all .14s ease-out;
+            }
+
+            .app__navbar-desktop a {
+                text-decoration: none;
+                color: var(--independence);
+            }
+
+            .app__navbar-desktop li:hover {
+                box-shadow: 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.6);
+                transform: translate(-.10rem, -.10rem);
+                border: 1px solid var(--powder-blue);
+                color: var(--powder-blue);
+            }
+
+            .app__navbar .app__brand-logo {
+                width: 130px;
+                height: 40px;
+            }
+
+            .app__navbar .app__navbar-left {
+                display: flex;
+                justify-content: start;
+                padding-left: 0;
+            }
+
+            .app__navbar .app__navbar-left li:nth-child(2) {
+                margin-left: 3rem;
+            }
+
+            .app__navbar .app__navbar-right li:nth-child(1) {
+                margin-right: 1.2rem;
+                cursor: pointer;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="app__navbar">
+
+        <img class="app__navbar-mobile" src="./_assets/menu.png" alt="menu" />
+        <img class="app__brand-logo app__navbar-mobile" src="./_assets/logo2.png" alt="logo" />
+        <ul class="app__navbar-desktop app__navbar-left">
+            <img class="app__brand-logo app__navbar-desktop" src="./_assets/brand-logo.png" alt="logo" />
+            <li>
+                <a href="/" class="app__desktop-menu">All</a>
+            </li>
+            <li>
+                <a href="/" class="">Living</a>
+            </li>
+            <li>
+                <a href="/" class="">Patio</a>
+            </li>
+            <li>
+                <a href="/" class="">Dinning</a>
+            </li>
+            <li>
+                <a href="/" class="">Bed</a>
+            </li>
+            <li>
+                <a href="/" class="">Deck</a>
+            </li>
+            <li>
+                <a href="/" class="">Others</a>
+            </li>
+        </ul>
+        <ul class="app__navbar-right">
+            <li class="app__navbar-desktop">yourname@example.com</li>
+            <li>
+                <img src="./_assets/shopping-cart.png" alt="notification" />
+                <div>2</div>
+            </li>
+        </ul>
+
+
+    </nav>
+
+
+    <aside class="app__product-detail">
+        <div class="app__product-detail-image">
+            <img src="./_assets/close-2.png" alt="close">
+            <img src="https://images.pexels.com/photos/6430742/pexels-photo-6430742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="backyard chair">
+        </div>
+        <div class="app__product-detail--info">
+            <p>$180,00</p>
+            <p>Backyard Chair</p>
+            <p>Practical chair made of a combo of wood and metal special to enjoy the sun in the summer outside the
+                house with a confortable cushions.
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos mollitia fuga maiores placeat
+                corporis odio.
+            </p>
+            <button class="app__primary-button">
+                <i class="material-icons-outlined">
+                    shopping_cart
+                </i>
+                Add to cart
+            </button>
+        </div>
+    </aside>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_styles/navbar.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+        :root {
+            --independence: #555B6E;
+            --morning-blue: #89B0AE;
+            --powder-blue: #BEE3DB;
+            --cultured: #FAF9F9;
+            --apricot: #FFD6BA;
+            --xsmall-font: 0.85rem;
+            --small-font: 1rem;
+            --medium-font: 1.2rem;
+            --large-font: 1.4rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+            box-sizing: border-box;
+            background-color: var(--cultured);
+        }
+
+        .app__desktop-menu {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--powder-blue);
+            border-top: none;
+            border-radius:  0 0.4rem 0.4rem;
+            padding: 1rem 1rem 0 1rem;
+
+            position: absolute;
+            right: 4.375rem;
+            top: 4.375rem;
+        }
+
+        .app__desktop-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .app__desktop-menu ul li {
+            text-align: end;
+        }
+
+        .app__desktop-menu ul li:nth-child(1),
+        .app__desktop-menu ul li:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .app__desktop-menu ul li a {
+            text-decoration: none;
+            color: var(--independence);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .app__desktop-menu ul li:last-child {
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--independence);
+        }
+
+        .app__desktop-menu ul li:last-child a {
+            color: var(--morning-blue);
+            font-size: var(--xsmall-font);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="app__navbar">
+
+        <img class="app__navbar-mobile" src="./_assets/menu.png" alt="menu" />
+        <img class="app__brand-logo app__navbar-mobile" src="./_assets/logo2.png" alt="logo" />
+        <ul class="app__navbar-desktop app__navbar-left">
+            <img class="app__brand-logo app__navbar-desktop" src="./_assets/brand-logo.png" alt="logo" />
+            <li>
+                <a href="/" class="">All</a>
+            </li>
+            <li>
+                <a href="/" class="">Living</a>
+            </li>
+            <li>
+                <a href="/" class="">Patio</a>
+            </li>
+            <li>
+                <a href="/" class="">Dinning</a>
+            </li>
+            <li>
+                <a href="/" class="">Bed</a>
+            </li>
+            <li>
+                <a href="/" class="">Deck</a>
+            </li>
+            <li>
+                <a href="/" class="">Others</a>
+            </li>
+        </ul>
+        <ul class="app__navbar-right">
+            <li class="app__navbar-desktop">yourname@example.com</li>
+            <li>
+                <img src="./_assets/shopping-cart.png" alt="notification" />
+                <div>2</div>
+            </li>
+        </ul>
+    </nav>
+    <div class="app__desktop-menu">
+        <ul>
+            <li>
+                <a href="/" class="app__desktop-menu--title">My orders</a>
+            </li>
+            <li>
+                <a href="/" class="">My account</a>
+            </li>
+            <li>
+                <a href="/" class="">Sign out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
